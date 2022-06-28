@@ -1,0 +1,45 @@
+<% layout('./layouts/boilerplate')%>
+
+
+    <% layout('./layouts/boilerplate')%>
+
+        <div class="container d-flex justify-content-center align-items-center mt-2">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4 mb-3">
+                    <div class="card shadow">
+                        <img class="card-img-top"
+                            src="https://res.cloudinary.com/dssbf89wa/image/upload/v1640929611/YelpCamp/photo-1564507592333-c60657eea523_wngqiu.jpg"
+                            alt="">
+                        <div class="card-body">
+
+                            <h4 class="card-title">Register</h4>
+                            <form action="/register" method="post" class="validated-form" novalidate>
+                                <div class="mb-3">
+                                    <label class="form-label" for="location"> Username: </label>
+                                    <input class="form-control" type="text" id="username" name="username" autofocus
+                                        required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email"> Email: </label>
+                                    <input class="form-control" type="email" id="email" name="email" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="password"> Password: </label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-block">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,35 @@
+body{
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url("https://res.cloudinary.com/dssbf89wa/image/upload/v1640929524/iStock_000058485880_XXXLarge_ui4syu.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cover-container{
+    max-width: 75vw;
+}
+
+.nav-link{
+    font-weight: 700;
+    font-size:1.2rem ;
+    color: rgb(255, 255, 255,0.6);
+    padding: 0.25rem 0;
+    margin-left: 1.5rem;
+    border-bottom: 0.2rem solid transparent 
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+
+.nav-link.active{
+    color: rgba(255,255,255);
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+
+.btn-seconadary, .btn-seconadary:hover{
+    color:#333;
+    text-shadow: none;
+}
