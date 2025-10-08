@@ -26,7 +26,7 @@ module.exports.createCampground = async (req, res, next) => {
     campground.images = req.files.map(f => ({ url: f.path, filename: f.filename }))
     campground.author = req.user.id;
     await campground.save();
-    req.flash('success', 'Successfully made a new campground')
+    req.flash('success', 'Successfully made a new destination')
     res.redirect(`/destinations/${campground.id}`)
 }
 
@@ -40,7 +40,7 @@ module.exports.showCampground = async (req, res) => {
     }).populate('author');
     //  console.log(camp)
     if (!camp) {
-        req.flash('error', 'Cannot find that campground')
+        req.flash('error', 'Cannot find that destination')
         return res.redirect('/campgrounds')
     }
     res.render('campgrounds/show', { camp });
@@ -77,6 +77,6 @@ module.exports.updateCampground = async (req, res) => {
 module.exports.deleteCampground = async (req, res) => {
     const { id } = req.params;
     await Campground.findByIdAndDelete(id);
-    req.flash('success', 'Successfully deleted campground')
+    req.flash('success', 'Successfully deleted destination')
     res.redirect("/destinations")
 }
